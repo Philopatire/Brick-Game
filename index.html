@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="loosing">
+        <h2></h2>
+        <h5 class="score-count"></h5>
+        <p></p>
+        <div class="container">
+            <button class="restart"></button>
+        </div>
+    </div>
+    <header>
+        <h1>Welecome to my game</h1>
+        <div class="informations">
+            <div id="score" data-count="0">0</div>
+        </div>
+        <button id="play">Play (Space)</button>
+        <button id="pause">Pause (P)</button>
+        <button class="restart">Restart (R)</button>
+    </header>
+    <div class="game">
+        <div class="block-container">
+        </div>
+        <div class="playing-container">
+            <img src="img/ball.png" alt="Ball" id="ball" style="bottom: 30px; left: 0px;">
+            <div id="playBlock" style="left: 0;">
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

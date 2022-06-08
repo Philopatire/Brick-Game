@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0;
+}
+.overlay {
+  z-index: 10;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 60%);
+  height: 100vh;
+  width: 100%;
+}
+header {
+  text-align: center;
+  padding: 15px;
+  background-color: #f44336;
+  margin-bottom: 20px;
+}
+header h1 {
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: 900;
+}
+header .informations {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 1.1rem;
+}
+header .informations #score::before {
+  content: "Score: ";
+}
+header button {
+  background-color: #fff;
+  border: none;
+  padding: 5px 12px;
+  cursor: pointer;
+}
+.game {
+  border: 10px solid black;
+  height: 560px;
+  overflow: hidden;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 40px;
+  position: relative;
+}
+.game .block-container {
+  padding: 15px;
+  height: 310px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(8, 70px);
+  column-gap: 20px;
+  grid-template-rows: 25px;
+  row-gap: 20px;
+}
+.game .block-container .block {
+  background-color: #ffc107;
+  height: 25px;
+}
+.game .playing-container {
+  width: 100%;
+}
+.game .playing-container #playBlock {
+  position: absolute;
+  bottom: 15px;
+  height: 10px;
+  width: 200px;
+  background-color: #3f51b5;
+  margin: 0 50%;
+  transform: translateX(-50%);
+  border-radius: 12px;
+  transition: 1ms;
+}
+.game .playing-container #ball {
+  position: absolute;
+  bottom: 30px;
+  width: 30px;
+  display: inline-block;
+  margin: 0 50%;
+  transform: translateX(-50%);
+  margin-bottom: -5px;
+}
+.loosing {
+  position: absolute;
+  z-index: 11;
+  width: 350px;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 235px;
+  padding: 35px 0;
+  text-align: center;
+  display: none;
+}
+.loosing h2 {
+  margin-bottom: 5px;
+}
+.loosing h5 {
+  margin-bottom: 10px;
+}
+.loosing p {
+  margin-bottom: 15px;
+}
+.loosing .container {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.loosing .container button {
+  background-color: #f44336;
+  border: none;
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1em;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.loosing .container button:hover {
+  background-color: #ff6357;
+}
